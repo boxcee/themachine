@@ -1,0 +1,14 @@
+<template name="addClient">
+    <form class="main form">
+        <div class="form-group">
+            <label class="control-label" for="clientName">Client Name</label>
+
+            <div class="controls">
+                <input name="clientName" id="clientName" type="text" value="" placeholder="Enter client name here"
+                       class="form-control"/>
+            </div>
+        </div>
+        <input type="submit" value="Add Client" class="btn btn-primary"/>
+    </form>
+    {{> clientsList}}
+</template>
