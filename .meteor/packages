@@ -30,3 +30,5 @@ aldeed:autoform
 aldeed:collection2
 aldeed:simple-schema
 aldeed:autoform-select2
+ongoworks:security
+aldeed:delete-button

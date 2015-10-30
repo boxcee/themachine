@@ -1,8 +1,8 @@
 <template name="user">
     <div class="post">
         <div class="post-content">
-            <h3>{{username}}<span>{{profile.roles}}{{profile.firstName}}{{profile.lastName}}</span></h3>
+            <h3>{{username}}<span>Roles: {{profile.roles}}{{profile.firstName}}{{profile.lastName}}</span></h3>
         </div>
-        <button class="btn btn-danger" style="float:right">Delete</button>
+        {{> quickRemoveButton collection="Meteor.users" _id=this._id style="float:right;" class="btn btn-danger"}}
     </div>
 </template>

@@ -1,25 +1,6 @@
 <template name="createProject">
-    <form class="main form page">
-        <div class="form-group">
-            <label class="control-label" for="projectName">Project Name</label>
-
-            <div class="controls">
-                <input name="projectName" id="projectName" type="text" value="" placeholder="Enter project name here"
-                       class="form-control"/>
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label" for="clientName">Client</label>
-
-            <div class="controls">
-                <select class="input" id="clientName" name="clientName" style="width:100%;">
-                    {{#each getClients}}
-                        <option value="{{clientName}}" data-id={{_id}}>{{clientName}}</option>
-                    {{/each}}
-                </select>
-            </div>
-        </div>
-        <input type="submit" value="Create Project" class="btn btn-primary"/>
-    </form>
+    <div class="main">
+        {{> quickForm collection="Projects" id="insertProjectForm" type="insert"}}
+    </div>
 </template>
 

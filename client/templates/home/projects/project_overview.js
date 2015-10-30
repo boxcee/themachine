@@ -3,6 +3,6 @@
  */
 Template.projectOverview.helpers({
     projects: function () {
-        return Projects.find();
+        return Projects.find({}, {sort: {projectName: 1}});
     }
 });

@@ -1,0 +1,14 @@
+<template name="extractFindings">
+    <div class="main">
+        <div class="posts">
+            <span><h3>Extraction View</h3></span><span style="margin-left:10px;">{{projectName}} - {{clientName}}</span>
+            {{#autoForm collection="Findings" id="insertFinding" type="insert"}}
+                <fieldset>
+                    {{> afQuickField name='projectId' value=this._id}}
+                    {{> afQuickField name='initialExtraction'}}
+                </fieldset>
+                <button type="submit" class="btn btn-primary">Insert</button>
+            {{/autoForm}}
+        </div>
+    </div>
+</template>

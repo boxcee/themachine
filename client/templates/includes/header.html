@@ -11,11 +11,9 @@
         </div>
         <div class="collapse navbar-collapse" id="navigation">
             <ul class="nav navbar-nav">
-                {{#if isInRole 'admin'}}
-                    <li><a href="{{pathFor 'createProject'}}">Create Project</a></li>
-                    <li><a href="{{pathFor 'addClient'}}">Client Management</a></li>
-                    <li><a href="{{pathFor 'userOverview'}}">User Management</a></li>
-                {{/if}}
+                <li><a href="{{pathFor 'createProject'}}">Create Project</a></li>
+                <li><a href="{{pathFor 'addClient'}}">Client Management</a></li>
+                <li><a href="{{pathFor 'userOverview'}}">User Management</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
