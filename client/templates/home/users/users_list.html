@@ -1,7 +1,25 @@
 <template name="usersList">
     <div class="posts">
-        {{#each users}}
-            {{> user}}
-        {{/each}}
+        <table class="table table-bordered">
+            <tr class="main">
+                <th>
+                    Username
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Roles
+                </th>
+                <th>
+                    Delete
+                </th>
+            </tr>
+            {{#each users}}
+                <tr class="main">
+                    {{> user}}
+                </tr>
+            {{/each}}
+        </table>
     </div>
 </template>

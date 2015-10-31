@@ -10,3 +10,19 @@ if (Roles.getAllRoles().count() === 0) {
     Roles.createRole('guest');
     Roles.createRole('default');
 }
+
+if (Meteor.users.find().count() === 0) {
+    var newUser = Accounts.createUser({
+        username: 'magnificent',
+        password: 'test',
+        email: 'msc@marketlogicsoftware.com',
+        profile: {
+            firstName: 'Moritz',
+            lastName: 'Schmitz',
+            organization: 'Market Logic Software',
+            roles: ['admin']
+        }
+    });
+    Roles.addUsersToRoles(newUser, ['admin']);
+    console.log("Admin user created.");
+}

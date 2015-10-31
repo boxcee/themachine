@@ -3,18 +3,14 @@
  */
 Meteor.methods({
     createNewUser: function (doc) {
-        // Important server-side check for security and data integrity
-        check(doc, Schema.addUser);
+
+        check(doc, Meteor.users);
 
         console.log(doc);
 
-        var newUser = Accounts.createUser({
-            username: doc.username,
-            email: doc.email,
-            password: doc.password,
-            profile: doc.profile
-        });
+        var newUser = Accounts.createUser(doc);
 
+        Roles.addUsersToRoles(newUser, doc.profile.roles);
         // Meteor.users.update(newUser);
     }
 });

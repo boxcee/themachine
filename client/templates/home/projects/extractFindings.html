@@ -4,7 +4,7 @@
             <span><h3>Extraction View</h3></span><span style="margin-left:10px;">{{projectName}} - {{clientName}}</span>
             {{#autoForm collection="Findings" id="insertFinding" type="insert"}}
                 <fieldset>
-                    {{> afQuickField name='projectId' value=this._id}}
+                    {{> afQuickField name='projectId' value=this._id type="hidden"}}
                     {{> afQuickField name='initialExtraction'}}
                 </fieldset>
                 <button type="submit" class="btn btn-primary">Insert</button>
