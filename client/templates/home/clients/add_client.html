@@ -1,6 +1,14 @@
 <template name="addClient">
     <div class="main">
-        {{> quickForm collection="Clients" id="insertClientForm" type="insert"}}
+        {{#autoForm collection="Clients" id="projectInsertForm" type="insert"}}
+            <fieldset>
+                {{> afQuickField name="clientName"  template="bootstrap3-horizontal" label-class="col-sm-2" input-col-class="col-sm-10"}}
+                <div>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <button type="reset" class="btn btn-default">Reset Form</button>
+                </div>
+            </fieldset>
+        {{/autoForm}}
     </div>
     {{> clientsList}}
 </template>
